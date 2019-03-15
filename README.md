@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ohitsdaniel/cocoapods-localsource/master/podfileedit.gif">
+</p>
+
 **cocoapods-localsource** allows to import local development pods without specifying a path.
 
 ## Installation 
