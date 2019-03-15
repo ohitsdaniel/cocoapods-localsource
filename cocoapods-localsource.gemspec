@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'cocoapods-localsource'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2019-03-15'
   s.summary     = "Allows including local podspec dependencies withouth the need of an externally hosted source"
   s.description = "A simple hello world gem"
@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
   s.metadata    = { "source_code_uri" => "https://github.com/ohitsdaniel/cocoapods-localsource" }
 
-  s.add_runtime_dependency 'cocoapods-core'
-  s.add_runtime_dependency 'cocoapods'
+  s.add_runtime_dependency 'cocoapods-core', '~> 1.0'
+  s.add_runtime_dependency 'cocoapods', '~> 1.0'
 end
