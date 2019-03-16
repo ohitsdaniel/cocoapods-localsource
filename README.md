@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ohitsdaniel/cocoapods-localsource/master/podfileedit.gif">
+  <img src="https://raw.githubusercontent.com/ohitsdaniel/cocoapods-localsource/master/podfileedit.gif"><br>
+<a href="https://badge.fury.io/rb/cocoapods-localsource"><img src="https://badge.fury.io/rb/cocoapods-localsource.svg" alt="Gem Version" height="18"></a>
 </p>
 
 **cocoapods-localsource** allows to import local development pods without specifying a path.
