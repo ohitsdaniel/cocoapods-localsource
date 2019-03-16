@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "../lib/cocoapods-localsource/LocalModuleManager.rb"
+require "cocoapods-localsource"
 
 class LocalModuleManagerTest < Minitest::Test
   def setup
