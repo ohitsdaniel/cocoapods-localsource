@@ -1,11 +1,18 @@
-require "cocoapods-core"
-
 class LocalModuleManager
   @@all_modules = {}
   @@resolved_modules = {}
+  @@local_paths = []
 
   def self.all_modules
     @@all_modules
+  end
+
+  def self.resolved_modules
+    @@resolved_modules
+  end
+
+  def self.local_paths
+    @@local_paths
   end
 
   def self.set_resolved(name)
@@ -17,6 +24,9 @@ class LocalModuleManager
   end
 
   def self.addLocalPath(path)
+    raise "Trying to add local path '#{path}' twice" unless !@@local_paths.include?(path)
+
+    @@local_paths << path
     dependencies = findLocalModules(path)
 
     dependencies.each do |key, value|
@@ -49,6 +59,8 @@ class LocalModuleManager
 
   def self.clear
     @@all_modules = {}
+    @@resolved_modules = {}
+    @@local_paths = []
   end
 end
 
@@ -69,5 +81,9 @@ class LocalModule
 
   def module_podspec_path
     "#{@modules_path}/#{@root}/#{@name}.podspec"
+  end
+
+  def ==(anOther)
+    module_podspec_path == anOther.module_podspec_path
   end
 end

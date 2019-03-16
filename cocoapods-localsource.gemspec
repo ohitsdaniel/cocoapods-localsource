@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
 
   s.authors = ["Daniel Peter"]
   s.email = "daniel.peter@me.com"
-  s.files = `git ls-files`.split($/)
+  s.files = Dir["lib/**/*.rb"]
   s.homepage =
     "http://rubygems.org/gems/cocoapods-localsource"
   s.license = "MIT"
